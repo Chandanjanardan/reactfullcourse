@@ -1,10 +1,11 @@
 import React from 'react'
-
-function TabButton({children,onSelect}) {
+import "./tabbutton.css"
+function TabButton({children,onSelect,isSelected}) {
+  console.log(isSelected)
   return (
         <li>
 
-            <button onClick={onSelect}>{children}</button>
+            <button className={isSelected?"active":undefined} onClick={onSelect}>{children}</button>
         </li>
     
   )

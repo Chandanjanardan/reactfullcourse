@@ -13,9 +13,9 @@ function Index() {
       <>
       <div>
         <h1>Hello this is children comp</h1>
-        <TabButton onSelect={()=>handleClick("components")}>components</TabButton>
-        <TabButton onSelect={()=>handleClick("JSX")}>JSX</TabButton>
-        <TabButton onSelect={()=>handleClick("IMG")}>IMG</TabButton>
+        <TabButton isSelected={section==="components"} onSelect={()=>handleClick("components")}>components</TabButton>
+        <TabButton isSelected={section==="JSX"} onSelect={()=>handleClick("JSX")}>JSX</TabButton>
+        <TabButton isSelected={section==="IMG"} onSelect={()=>handleClick("IMG")}>IMG</TabButton>
       </div>
       <div>
         <h3>{EXAMPLES[section].title}</h3>
