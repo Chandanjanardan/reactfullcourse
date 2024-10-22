@@ -22,4 +22,4 @@ export const EXAMPLES = {
     },
   };
   
-  console.log(EXAMPLES["JSX"])
+  // console.log(EXAMPLES["JSX"])
