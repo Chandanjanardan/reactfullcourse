@@ -1,28 +1,19 @@
-// postReducer.js
-export const postReducer = (state, action) => {
-    console.log(state, "this is reducer state");
-    switch (action.type) {
-      case "FETCH_START":
-        return {
-          ...state,
-          loading: true,
-          error: false, // Reset error state on new fetch
-        };
+export const INIT_STATE={loading:false,data:{},error:false}
+export const CounterReducer =(state,action)=>{
+  switch (action.type){
+    case "FETCH_START":
+      return{
+        ...state,loading:true,error:false
+      }
       case "FETCH_SUCCESS":
-        return {
-          ...state,
-          loading: false,
-          post: action.payload,
-          error: false,
-        };
-      case "FETCH_FAIL":
-        return {
-          ...state,
-          loading: false,
-          error: true,
-        };
-      default:
-        return state;
-    }
-  };
-  
+        return{
+          ...state,loading:false,error:false,data:action.payload
+        }
+        case "FETCH_FAILED":
+          return{
+            ...state,loading:false,error:true
+          }
+          default:
+            return{...state}
+          }
+        }
